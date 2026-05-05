@@ -1,93 +1,62 @@
-# Projeto Carrinho de Compras (CLI) - Node.js
+# Carrinho da Shopee (Node.js)
 
-## Sobre
+Projeto desenvolvido no bootcamp da DIO com foco em lógica de programação e modularização em JavaScript. A aplicação simula o comportamento de um carrinho de compras no terminal, permitindo gerenciar itens e calcular valores automaticamente.
 
-Este projeto simula um carrinho de compras no terminal, com foco em prática de JavaScript e Node.js. A proposta é reproduzir operações comuns de e-commerce de forma simples: adicionar produtos, listar itens, remover quantidades e fechar a compra.
+## Descrição
 
-O projeto foi desenvolvido no bootcamp da DIO como exercício de lógica, estrutura de dados e organização de código por módulos.
-
----
+Neste projeto, o carrinho armazena produtos, controla quantidade e exibe subtotal/total da compra. A ideia é praticar uma regra de negócio muito comum em e-commerce, usando uma estrutura simples e bem organizada.
 
 ## Funcionalidades
 
-* Listagem de produtos (Xbox e PlayStation)
-* Adição de produtos ao carrinho
-* Visualização do carrinho
-* Remoção de itens por quantidade
-* Cálculo automático do valor total
-* Simulação de pagamento (PIX, crédito e débito)
-* Encerramento do sistema por menu
+- Adicionar item ao carrinho
+- Remover item do carrinho
+- Calcular subtotal por produto
+- Calcular total geral da compra
+- Listar itens adicionados
 
----
+## Estrutura de pastas
 
-## Estrutura do projeto
-
-### `item.js`
-
-Define o modelo de item do carrinho, com:
-
-* nome
-* preço
-* quantidade
-* cálculo de subtotal
-
-### `cart.js`
-
-Centraliza as regras de negócio do carrinho:
-
-* adicionar item
-* listar itens
-* remover quantidade
-* calcular total
-
-### `index.js`
-
-Ponto de entrada da aplicação, responsável por:
-
-* menu interativo com `readline`
-* fluxo principal da aplicação
-* interação no terminal
-* simulação de pagamento
-
----
+```text
+Carrinho da shopee/
+├── arquitetura.png
+├── documentação.md
+├── package.json
+├── readme.md
+└── src/
+    ├── index.js
+    └── services/
+        ├── cart.js
+        └── item.js
+```
 
 ## Tecnologias
 
-* Node.js
-* JavaScript (ES Modules)
-* `readline` (módulo nativo)
-
----
+- Node.js
+- JavaScript (ES Modules)
 
 ## Como executar
 
-1. Tenha o Node.js instalado
-2. No diretório do projeto, execute:
+1. Abra o terminal na pasta do projeto
+2. Execute:
 
 ```bash
-node index.js
+node src/index.js
 ```
-
----
 
 ## Aprendizados
 
-Durante o desenvolvimento, os principais pontos praticados foram:
+- Organização de código por responsabilidade
+- Criação de funções reutilizáveis
+- Modelagem de regras de negócio
+- Separação entre item e carrinho para facilitar manutenção
 
-* modularização de código
-* manipulação de arrays e objetos
-* entrada de dados via terminal
-* implementação de regras de negócio em um cenário realista
+## Próximas melhorias
 
----
-
-## Próximos passos
-
-* persistência do carrinho em arquivo
-* autenticação de usuário
-* versão com interface gráfica (web)
-* melhorias de usabilidade no terminal
+- Atualização de quantidade diretamente no carrinho
+- Persistência dos dados em arquivo
+- Validações mais completas de entrada
+- Interface web para visualização dos itens
 
 ---
 
-Projeto criado para fins de estudo.
+Projeto para fins de estudo.
